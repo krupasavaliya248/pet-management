@@ -1,0 +1,60 @@
+//pet_shop
+
+//bill table
+CREATE TABLE [dbo].[Bill] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Cu_id]    NVARCHAR (50) NOT NULL,
+    [Cu_Name]  NVARCHAR (50) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Price]    INT           NOT NULL,
+    [Quantity] INT           NOT NULL,
+    [Total]    NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Table] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+//Customer tbl
+CREATE TABLE [dbo].[Customers] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [Customer_id] INT           NOT NULL,
+    [Cu_name]     NVARCHAR (50) NOT NULL,
+    [Email]       NVARCHAR (50) NOT NULL,
+    [Address]     NVARCHAR (50) NOT NULL,
+    [Mobile]      NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+//pet tbl
+CREATE TABLE [dbo].[pet] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Category] NVARCHAR (50) NOT NULL,
+    [Quantity] INT           NOT NULL,
+    [Price]    NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_pet] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+//sell_pro
+
+CREATE TABLE [dbo].[Sell_pro] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Price]    INT           NOT NULL,
+    [Quantity] INT           NOT NULL,
+    [Total]    INT           NULL,
+    CONSTRAINT [PK_Sell_pro] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+// register or employee table
+
+
+CREATE TABLE [dbo].[register] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Email]    NVARCHAR (50) NOT NULL,
+    [City]     NVARCHAR (50) NOT NULL,
+    [Address]  NVARCHAR (50) NOT NULL,
+    [Mobile]   NVARCHAR (50) NOT NULL,
+    [Password] NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_register] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
